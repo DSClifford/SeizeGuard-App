@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Seize Guard</string>
+    <string name="connect_text">Connect</string>
+    <string name="disconnect_text">Disconnect</string>
+    <string name="action_settings">Settings</string>
+    <string name="history_title">History</string>
+    <string name="HR">000</string>
+    <string name="history_button">History</string>
+	<string name="ECGgraph_label">ECG</string>
+	<string name="HRgraph_label">Heart Rate</string>
+	<string name="beating_heart">Beats at variable rate</string>
+	<string name="health_status">Tells whether about to have a seizure</string>
+	<string name="cstatus_label">Connection Status</string>
+	<string name="connection_status"> Not Connected</string>
+	<string name="demo_text">Demo</string>
+	<string name="demo_title">Demo Activity</string>
+</resources>

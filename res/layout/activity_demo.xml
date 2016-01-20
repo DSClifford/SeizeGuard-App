@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sg_logo"
+        android:id="@+id/Banner"
+        android:background="@color/banner"/>
+    
+    <TextView 
+    	android:id = "@+id/ECGgraph_label"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/Banner" 
+    	android:layout_alignParentRight="true"
+    	android:text="@string/ECGgraph_label"
+    	android:textColor="@color/ECGgraph"
+    	android:textSize = "20sp"
+    />
+    
+    <com.example.seizeguard.LineGraph
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/Banner"
+        android:id="@+id/ECGgraph" />
+    
+    <View
+        android:id="@+id/break1"
+ 		android:layout_width="match_parent"
+ 		android:layout_height="1dp"
+ 		android:background="@color/breaks"
+ 		android:layout_below="@id/ECGgraph" />
+    
+    <TextView 
+    	android:id = "@+id/HRgraph_label"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/break1" 
+    	android:layout_alignParentRight="true"
+    	android:text="@string/HRgraph_label"
+    	android:textColor="@color/HRgraph"
+    	android:textSize = "20sp"
+    />
+    
+    <com.example.seizeguard.LineGraph
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/break1"
+        android:id="@+id/RtoRgraph" />
+    
+    <View
+        android:id="@+id/break2"
+ 		android:layout_width="match_parent"
+ 		android:layout_height="1dp"
+ 		android:background="@color/breaks"
+ 		android:layout_below="@id/RtoRgraph" />
+    
+    <View
+        android:id="@+id/break3"
+ 		android:layout_width="match_parent"
+ 		android:layout_height="20dp"
+ 		android:background="@android:color/white"
+ 		android:layout_below="@id/break2" />
+    
+    <View
+        android:id="@+id/break4"
+ 		android:layout_width="475dp"
+ 		android:layout_height="75dp"
+ 		android:background="@android:color/white"
+ 		android:layout_below="@id/break3" />
+    
+    <ImageView 
+        android:id="@+id/heart_pic"
+        android:contentDescription="@string/beating_heart"
+        android:layout_width="75dp" 
+		android:layout_height="75dp"
+		android:layout_toRightOf="@id/break4"
+		android:src="@drawable/hr_pulse"
+        android:layout_below="@+id/break3" 
+        />
+    
+    <TextView 
+		android:id="@+id/labelHeartRate" 
+		android:layout_width="200dp" 
+		android:layout_height="wrap_content" 
+		android:text="@string/HR"
+		android:textSize="100sp"
+		android:textColor="@color/HRnum"
+		android:height="120dp"
+		android:width="200dp"
+		android:gravity="bottom"
+		android:layout_below="@+id/RtoRgraph" 
+		android:layout_alignParentRight="true"></TextView>
+    
+    <ImageView 
+        android:id="@+id/Hstatus_label"
+        android:contentDescription="@string/health_status"
+        android:layout_width="300dp" 
+		android:layout_height="100dp"
+		android:src="@drawable/status"
+        android:layout_below="@+id/break4" 
+        />
+    
+    <ImageView 
+        android:id="@+id/health_status"
+        android:contentDescription="@string/health_status"
+        android:layout_width="425dp" 
+		android:layout_height="200dp"
+		android:src="@drawable/normal"
+        android:layout_below="@+id/break6" 
+        /> 
+  
+    <TextView 
+    	android:id = "@+id/Cstatus_label"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/health_status" 
+    	android:text="@string/cstatus_label"
+    	android:textSize = "20sp"
+    />
+    
+    <TextView 
+		android:id="@+id/connection_status" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:height="100dp"
+		android:width="400dp" 
+		android:textSize="30sp"
+		android:text="@string/connection_status"
+		android:layout_below="@+id/Cstatus_label" 
+		android:layout_alignParentLeft="true"></TextView>
+    
+    <View
+        android:id="@+id/break5"
+ 		android:layout_width="550dp"
+ 		android:layout_height="10dp"
+ 		android:background="@android:color/white"
+ 		android:layout_below="@id/Hstatus_label" />
+        
+    <View
+        android:id="@+id/break6"
+ 		android:layout_width="700dp"
+ 		android:layout_height="25dp"
+ 		android:background="@android:color/white"
+ 		android:layout_below="@id/Hstatus_label" />
+    
+     <ImageView 
+        android:id="@+id/gauge"
+        android:contentDescription="@string/beating_heart"
+        android:layout_width="190dp" 
+		android:layout_height="190dp"
+		android:layout_toRightOf="@id/break5"
+		android:src="@drawable/gauge"
+        android:layout_below="@+id/break6" ></ImageView>
+    
+     <View
+        android:id="@+id/break7"
+ 		android:layout_width="700dp"
+ 		android:layout_height="0dp"
+ 		android:background="@android:color/white"
+ 		android:layout_below="@id/connection_status" />
+     
+     <ImageButton
+    	android:id="@+id/demo"
+    	android:src="@drawable/demo"
+    	android:layout_width="250dp"
+		android:layout_height="300dp" 
+    	android:layout_below="@+id/break7" 
+    	android:layout_alignParentLeft="true"
+    	android:adjustViewBounds="true"
+    	android:padding="5dp"
+    	android:scaleType="fitCenter"
+    	android:background="@null"></ImageButton>  
+     
+    <ImageButton
+    	android:id="@+id/history"
+    	android:layout_width="250dp"
+		android:layout_height="300dp" 
+		android:src="@drawable/history"
+		android:adjustViewBounds="true"
+    	android:padding="5dp"
+    	android:scaleType="fitCenter"
+    	android:background="@null"
+    	android:layout_below="@+id/break7" 
+    	android:layout_alignParentRight="true"></ImageButton>    
+</RelativeLayout>

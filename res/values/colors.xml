@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="banner">#B0B0B0</color>
+    <color name="background">#FFFFFF</color> 
+    <color name="ECGgraph">#008000</color>
+    <color name="HRgraph">#D50929</color>
+    <color name="HRnum">#D50929</color>
+    <color name="breaks">#000000</color>
+</resources>
